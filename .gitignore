@@ -12,3 +12,8 @@ server/database.sqlite
 .vscode/
 .idea/
 *.log
+
+# Vercel deployment requirements
+!api/
+!package.json
+!vercel.json
