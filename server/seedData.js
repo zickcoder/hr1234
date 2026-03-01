@@ -55,7 +55,7 @@ const seedData = {
         {
             name: "Super Admin",
             email: "admin@gmail.com",
-            password_hash: "$2a$10$c6bFRVS19qcGNz3H58VKBu0GKxWULVcGd1tQ7AjHo/RTq2vJNo3KK",
+            password_hash: "$2b$10$9K/rWLh/gL8jBB5uRRupe.Wi7vbQYLtRZtR9XhTDTgyBjq2gra0xi",
             role: "SuperAdmin",
             employee_id: null
         },
