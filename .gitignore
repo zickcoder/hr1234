@@ -1,3 +1,5 @@
+# Original Gitignore
+
 # Dependencies
 node_modules/
 client/node_modules/
@@ -22,9 +24,3 @@ server/.env
 
 # SQLite database
 server/database.sqlite
-
-# Vercel tracked files (whitelist)
-!api/
-!seedData.js
-!package.json
-!vercel.json
