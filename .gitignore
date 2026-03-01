@@ -1,19 +1,30 @@
+# Dependencies
 node_modules/
 client/node_modules/
 server/node_modules/
+
+# Build outputs
 dist/
 client/dist/
 server/dist/
+
+# Environment variables
 .env
 client/.env
 server/.env
 *.local
-server/database.sqlite
+
+# IDE and system files
 .vscode/
 .idea/
 *.log
+.DS_Store
 
-# Vercel deployment requirements
+# SQLite database
+server/database.sqlite
+
+# Vercel tracked files (whitelist)
 !api/
+!seedData.js
 !package.json
 !vercel.json

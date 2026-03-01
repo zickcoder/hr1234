@@ -36,47 +36,27 @@ const seedData = {
             date_hired: "2026-02-26",
             branch_location: "Cebu Hub",
             is_active: 1
-        },
-        {
-            employee_id: 4,
-            first_name: "Jocath",
-            last_name: "asdasd",
-            email: "jocath@gmail.com",
-            contact_number: "",
-            department: null,
-            position: "Sorter",
-            employment_status: "Probationary",
-            date_hired: "2026-02-27",
-            branch_location: "Cebu Hub",
-            is_active: 1
         }
     ],
     users: [
         {
-            name: "Zick Admin",
-            email: "zickadmin@gmail.com",
-            password: "adminpassword123",
-            role: "SuperAdmin",
-            employee_id: null
-        },
-        {
             name: "Super Admin",
             email: "admin@gmail.com",
-            password: "123456",
+            password_hash: "$2a$10$nFMk99pBm/oLBbbrGFObIebr8l6k9XCZUop2B.YigMv0jdyqwmezsrC",
             role: "SuperAdmin",
             employee_id: null
         },
         {
             name: "HR Admin",
             email: "hr@company.com",
-            password: "Admin123!",
+            password_hash: "$2a$10$dZrMGApE629sadZM5HLdYuWPmuf2zd9QWYhNmn8jo.Mu.SzNZMki2",
             role: "HRAdmin",
             employee_id: null
         },
         {
             name: "Maria Santos",
             email: "maria@test.com",
-            password: "12345",
+            password_hash: "$2a$10$epixmO32bsbkC2EtonvNSuMSdgS6Evasv3igMv9ntWp3StMSKISjofeuK",
             role: "Employee",
             employee_id: 3
         }
