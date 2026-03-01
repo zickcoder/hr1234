@@ -1,4 +1,3 @@
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const seedData = require('../seedData');
 
@@ -21,9 +20,8 @@ module.exports = (req, res) => {
         return res.status(401).json({ success: false, message: 'Invalid email or password.' });
     }
 
-    // Compare password with bcrypt hash
-    const isValid = bcrypt.compareSync(password, user.password_hash);
-    if (!isValid) {
+    // Compare plain text password
+    if (password !== user.password) {
         return res.status(401).json({ success: false, message: 'Invalid email or password.' });
     }
 

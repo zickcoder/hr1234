@@ -53,32 +53,32 @@ const seedData = {
     ],
     users: [
         {
+            name: "Zick Admin",
+            email: "zickadmin@gmail.com",
+            password: "adminpassword123",
+            role: "SuperAdmin",
+            employee_id: null
+        },
+        {
             name: "Super Admin",
             email: "admin@gmail.com",
-            password_hash: "$2a$10$c6bFRVS19qcGNz3H58VKBu0GKxWULVcGd1tQ7AjHo/RTq2vJNo3KK",
+            password: "123456",
             role: "SuperAdmin",
             employee_id: null
         },
         {
             name: "HR Admin",
             email: "hr@company.com",
-            password_hash: "$2a$10$Tok/bylLLFvd2RLra2geFOXC663ogeOjjLhav757jKRNk.bAYOope",
+            password: "Admin123!",
             role: "HRAdmin",
             employee_id: null
         },
         {
             name: "Maria Santos",
             email: "maria@test.com",
-            password_hash: "$2a$10$cYoSzN9ogJ9mDlTfx9336e7Gf4t/D6UUIzBwit.NvVxR2g4xQ/Q06",
+            password: "12345",
             role: "Employee",
             employee_id: 3
-        },
-        {
-            name: "Zick Admin",
-            email: "zickadmin@gmail.com",
-            password_hash: "$2a$10$E/DvzwkD7naVoxfTxHCtaOtXSB.4ePnFDV/joUhogkvxdn7X5zZZi",
-            role: "SuperAdmin",
-            employee_id: null
         }
     ]
 };
