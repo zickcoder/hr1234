@@ -1,7 +1,22 @@
 const Database = require('sqlite3').verbose();
 const path = require('path');
+const fs = require('fs');
 
-const DB_PATH = path.join(__dirname, '..', 'database.sqlite');
+let DB_PATH = path.join(__dirname, '..', 'database.sqlite');
+
+// Vercel read-only filesystem workaround
+if (process.env.VERCEL) {
+  const tempDbPath = path.join('/tmp', 'database.sqlite');
+  if (!fs.existsSync(tempDbPath)) {
+    try {
+      fs.copyFileSync(DB_PATH, tempDbPath);
+      console.log('Database copied to /tmp for write access.');
+    } catch (err) {
+      console.error('Failed to copy database to /tmp:', err.message);
+    }
+  }
+  DB_PATH = tempDbPath;
+}
 
 let db;
 
