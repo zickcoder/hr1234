@@ -50,6 +50,10 @@ app.use((req, res) => {
     res.status(404).json({ success: false, message: 'Route not found.' });
 });
 
-app.listen(PORT, () => {
-    console.log(`HR System Server running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`HR System Server running on http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app;
