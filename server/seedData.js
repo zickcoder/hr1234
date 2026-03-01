@@ -35,7 +35,7 @@ const seedData = {
             employment_status: "Probationary",
             date_hired: "2026-02-26",
             branch_location: "Cebu Hub",
-            is_active: 0
+            is_active: 1
         },
         {
             employee_id: 4,
@@ -53,48 +53,25 @@ const seedData = {
     ],
     users: [
         {
-            name: "Admin User",
-            email: "admin@hr.com",
-            password_hash: "$2a$10$2PfyZTj71.xfuxKxdl5zi.i44UWlpr.Ug0fIFh2WXtbPfe534nuwS",
-            role: "SuperAdmin",
-            employee_id: null
-        },
-        {
             name: "Super Admin",
             email: "admin@gmail.com",
-            password_hash: "$2a$10$6Bh3R3FYxoWt1PkqvwaZ7eDnKWNMl/ph1coiqInH1rB6LWqOW/KYO",
-            role: "HRAdmin",
+            password_hash: "$2a$10$c6bFRVS19qcGNz3H58VKBu0GKxWULVcGd1tQ7AjHo/RTq2vJNo3KK",
+            role: "SuperAdmin",
             employee_id: null
         },
         {
             name: "HR Admin",
             email: "hr@company.com",
-            password_hash: "$2a$10$wBv37ndmMQWhKZeqxn7cwuBNkhxHiG40naX/SS3TEp9OFDylPn/Ba",
+            password_hash: "$2a$10$Tok/bylLLFvd2RLra2geFOXC663ogeOjjLhav757jKRNk.bAYOope",
             role: "HRAdmin",
             employee_id: null
         },
         {
             name: "Maria Santos",
             email: "maria@test.com",
-            password_hash: "$2a$10$AKuzv3aoSb888Dvn.8xRsec7G4yEE6nYkYq2MPQWY92cOe29yOMVm",
+            password_hash: "$2a$10$cYoSzN9ogJ9mDlTfx9336e7Gf4t/D6UUIzBwit.NvVxR2g4xQ/Q06",
             role: "Employee",
             employee_id: 3
-        },
-        {
-            name: "Juan Dela Cruz",
-            email: "juan@hr.com",
-            password_hash: "$2a$10$LXcEY16hS/98aRXKD6IqYejTBoO85/XJseHXMNzTp0/xl20k5lOrK",
-            role: "Employee",
-            employee_id: 1,
-            temporary_password: "lPPG.&Tk|z<&9j"
-        },
-        {
-            name: "Jocath asdasd",
-            email: "jocath@gmail.com",
-            password_hash: "$2a$10$STYvtiPmjzSqdfiPKqdD6eSm.nSd2kadFqdlxxjXIFU48C24r92.u",
-            role: "Employee",
-            employee_id: 4,
-            temporary_password: "@at9UIc8Zx]I!L"
         }
     ]
 };
