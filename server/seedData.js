@@ -69,7 +69,7 @@ const seedData = {
         {
             name: "Maria Santos",
             email: "maria@test.com",
-            password_hash: "$2a$10$cYoSzN9ogJ9mDlTfx9336e7Gf4t/D6UUIzBwit.NvVxR2g4xQ/Q06",
+            password_hash: "$2b$10$o.kit3VWnJTyuGjhvs5I5uzv02.0Rjkk6k1mo.wyK4PmKSnPUaiIa",
             role: "Employee",
             employee_id: 3
         }
