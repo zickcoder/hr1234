@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const seedData = require('../seedData');
 
-export default function handler(req, res) {
+module.exports = (req, res) => {
     if (req.method !== 'POST') {
         return res.status(405).json({ success: false, message: 'Method not allowed' });
     }
@@ -13,8 +13,9 @@ export default function handler(req, res) {
         return res.status(400).json({ success: false, message: 'Email and password are required.' });
     }
 
-    // Find user in seedData
-    const user = seedData.users.find(u => u.email === email);
+    // Find user in seedData (case-insensitive email)
+    const normalizedEmail = email.toLowerCase();
+    const user = seedData.users.find(u => u.email.toLowerCase() === normalizedEmail);
 
     if (!user) {
         return res.status(401).json({ success: false, message: 'Invalid email or password.' });
@@ -29,13 +30,13 @@ export default function handler(req, res) {
     // Generate JWT token
     const token = jwt.sign(
         {
-            id: user.id || 0, // Fallback if ID is missing in seedData
+            id: user.id || 0,
             name: user.name,
             email: user.email,
             role: user.role,
             employee_id: user.employee_id
         },
-        process.env.JWT_SECRET || 'your_fallback_secret', // Should be set in Vercel environment variables
+        process.env.JWT_SECRET || 'your_fallback_secret',
         { expiresIn: process.env.JWT_EXPIRES_IN || '24h' }
     );
 
@@ -53,4 +54,4 @@ export default function handler(req, res) {
             }
         }
     });
-}
+};

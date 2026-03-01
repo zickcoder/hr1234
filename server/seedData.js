@@ -55,7 +55,7 @@ const seedData = {
         {
             name: "Super Admin",
             email: "admin@gmail.com",
-            password_hash: "$2b$10$9K/rWLh/gL8jBB5uRRupe.Wi7vbQYLtRZtR9XhTDTgyBjq2gra0xi",
+            password_hash: "$2a$10$c6bFRVS19qcGNz3H58VKBu0GKxWULVcGd1tQ7AjHo/RTq2vJNo3KK",
             role: "SuperAdmin",
             employee_id: null
         },
@@ -69,7 +69,7 @@ const seedData = {
         {
             name: "Maria Santos",
             email: "maria@test.com",
-            password_hash: "$2b$10$o.kit3VWnJTyuGjhvs5I5uzv02.0Rjkk6k1mo.wyK4PmKSnPUaiIa",
+            password_hash: "$2a$10$cYoSzN9ogJ9mDlTfx9336e7Gf4t/D6UUIzBwit.NvVxR2g4xQ/Q06",
             role: "Employee",
             employee_id: 3
         },
