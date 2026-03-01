@@ -18,9 +18,21 @@ if (process.env.VERCEL) {
   DB_PATH = tempDbPath;
 }
 
+const { createClient } = require('@supabase/supabase-js');
+
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+
 let db;
+let supabase;
+
+if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+  supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
 
 function getDb() {
+  if (supabase) return null; // Use supabase client directly in controllers
+
   if (!db) {
     db = new Database.Database(DB_PATH, (err) => {
       if (err) {
@@ -32,6 +44,10 @@ function getDb() {
     });
   }
   return db;
+}
+
+function getSupabase() {
+  return supabase;
 }
 
 function initializeDatabase(db) {
@@ -282,4 +298,4 @@ function seedDataIfEmpty(db) {
   });
 }
 
-module.exports = { getDb };
+module.exports = { getDb, getSupabase };
